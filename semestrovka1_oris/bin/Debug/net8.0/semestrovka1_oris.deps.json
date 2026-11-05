@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "semestrovka1_oris/1.0.0": {
+        "runtime": {
+          "semestrovka1_oris.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "semestrovka1_oris/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

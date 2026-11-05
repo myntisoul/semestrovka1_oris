@@ -1,0 +1,142 @@
+*{
+    font-family: rubik, helvetica, arial, sans-serif;
+    color: rgb(39, 39, 39);
+    line-height: 24.5px;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+h1
+{
+    color: white;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+}
+* h3
+{
+    font-size: 25px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+} 
+body {
+    background: url('images/bg.png') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+.header{
+    display: flex;
+    background-color: rgb(66, 64, 61);
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 200px;
+    padding-right: 200px;
+    position: fixed;
+    width: 100%;
+}
+.header input{
+    width: 500px;
+    height: 30px;
+    margin: 10px;
+}
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 300px;
+    padding-right: 300px;
+}
+.main-content-header{
+    display: flex;
+    /* flex-direction: row; */
+    align-items: center;
+    justify-content: flex-start;
+    gap: 100px;
+}
+.main-content-header img{
+    height: 75px;
+    margin: 0;
+}
+.content-box{
+    background-color: rgb(218, 213, 203);
+    width: 100%;
+    flex-direction: column;
+    padding: 50px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-top: 100px;
+}
+.content-box h2{
+    font-size: 36px;
+}
+.box-img-header{
+    display: flex;
+    background-color: rgb(123, 59, 10);
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+.box-img-header b{
+    color: white;
+}
+.box-img{
+    float: right;
+    border: 1px solid rgb(77, 51, 41);
+    border-bottom: none;
+}
+.param-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-bottom: 1px solid rgb(77, 51, 41);
+}
+.param-box p{
+    /* margin: 0; */
+    font-size: 14px;
+}
+.param-box b{
+    font-size: 14px;
+}
+.box-img img{
+    height: 400px;
+    width: 400px;
+}
+.nav-box{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(77, 51, 41);
+    border-bottom: none;
+    width: 300px;
+}
+.nav-box p{
+    margin-left: 10px;
+}
+.nav-box-header{
+    border-bottom: 1px solid rgb(77, 51, 41);
+}
+.about-game-block{
+    margin-top: 20px;
+    overflow: hidden;
+}
+.about-p{
+    border-top: 1px solid rgb(77, 51, 41);
+}
+.images-box{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    border-top: 1px solid rgb(77, 51, 41);
+}
+.images-box img{
+    height: 200px;
+    margin-top: 20px;
+}
+.nav-sec{
+    border-bottom: 1px solid rgb(77, 51, 41);
+}
+.nav-sec p{
+    font-size: 14px;
+}
