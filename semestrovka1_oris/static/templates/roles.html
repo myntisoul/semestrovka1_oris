@@ -1,0 +1,10 @@
+<h2>Карты ролей</h2>
+<div class="cards-grid">
+    $foreach (Role role in roles)
+    {
+        <div class="card">
+            <img src="role.ImageURL" alt="Role">
+            <a href="/wiki/rolesdetails?id=role.Id"><h3>role.Name</h3></a>
+        </div>
+    }
+</div>
