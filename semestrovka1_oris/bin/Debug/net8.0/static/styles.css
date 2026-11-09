@@ -66,6 +66,8 @@ body {
     align-items: center;
     padding-left: 300px;
     padding-right: 300px;
+    width: 100%;
+    max-width: 2000px;
 }
 .main-content-header{
     display: flex;
@@ -163,7 +165,7 @@ body {
 }
 .cards-grid{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     justify-items: center;
 }
@@ -172,4 +174,10 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+.card img{
+    width: 243px;
 }
