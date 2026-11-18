@@ -52,6 +52,7 @@ namespace semestrovka1_oris.framework.core
         {
             using (var db = new GameContext())
             {
+                
                 string template = File.ReadAllText("static/templates/districts.html");
                 var districts = db.Districts.ToList();
                 var dataModel = new { districts = districts };
@@ -90,6 +91,14 @@ namespace semestrovka1_oris.framework.core
                 string result = layout.Replace("{{Content}}", contentHtml);
                 return (result, 200);
             }
+        }
+        [HttpGET]
+        public (string, int) Rules(NameValueCollection query)
+        {
+            string contentHtml = File.ReadAllText("static/templates/rules.html");
+            string layout = File.ReadAllText("static/layout.html");
+            string result = layout.Replace("{{Content}}", contentHtml);
+            return (result, 200);
         }
     }
 }

@@ -61,13 +61,27 @@ body {
 }
 .main-content {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     padding-left: 300px;
     padding-right: 300px;
-    width: 100%;
-    max-width: 2000px;
+    gap: 30px;  
+    margin: 0 auto;
+    padding: 0 50px;
+    
+}
+.menu{
+    display: flex;
+    background-color: rgb(218, 213, 203);
+    flex-direction: column;
+    margin-top: 100px;
+    padding: 20px;
+    padding-top: 0;
+    border-radius: 10px;
+    gap: 10px;
+    /* position: fixed; */
+
 }
 .main-content-header{
     display: flex;
@@ -89,6 +103,8 @@ body {
     border-radius: 10px;
     margin-top: 100px;
     margin-bottom: 50px;
+    width: 100%;
+    max-width: 2000px;
 }
 .content-box h2{
     font-size: 36px;
