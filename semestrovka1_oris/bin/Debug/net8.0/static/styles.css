@@ -40,20 +40,19 @@ body {
     align-items: center;
 }
 .search input{
-    width: 500px;
+    width: 400px;
     height: 30px;
     margin: 10px;
 }
 .search-btn{
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     background-color: rgb(123, 59, 10);
-    padding: 5px;
     padding-left: 20px;
     padding-right: 20px;
     height: auto;
     border-radius: 5px;
+    cursor: pointer;
 }
 .search-btn p{
     color: white;
@@ -71,7 +70,7 @@ body {
     padding: 0 50px;
     
 }
-.menu{
+.menu {
     display: flex;
     background-color: rgb(218, 213, 203);
     flex-direction: column;
@@ -80,8 +79,9 @@ body {
     padding-top: 0;
     border-radius: 10px;
     gap: 10px;
-    /* position: fixed; */
-
+    position: sticky;
+    top: 105px;
+    align-self: flex-start;
 }
 .main-content-header{
     display: flex;
@@ -196,4 +196,8 @@ body {
 }
 .card img{
     width: 243px;
+}
+.found{
+    display: flex;
+    flex-direction: column;
 }

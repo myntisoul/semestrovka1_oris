@@ -1,0 +1,17 @@
+<div class="search-results">
+    <h2>Результаты поиска</h2>
+    <div class="found">
+        <h3>Персонажи</h3>
+        $foreach (Role role in roles)
+        {
+            <a href="/wiki/rolesdetails?id=role.Id"><h4>role.Name</h4></a>
+        }
+    </div>
+    <div class="found">
+        <h3>Районы</h3>
+        $foreach (District district in districts)
+        {
+            <a href="/wiki/districtsdetails?id=district.Id"><h4>district.Name</h4></a>
+        }
+    </div>
+</div>

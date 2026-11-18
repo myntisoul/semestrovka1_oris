@@ -100,5 +100,44 @@ namespace semestrovka1_oris.framework.core
             string result = layout.Replace("{{Content}}", contentHtml);
             return (result, 200);
         }
+        [HttpGET]
+        public (string, int) Search(NameValueCollection query)
+        {
+            using (var db = new GameContext()) 
+            {
+                string searchReq = (query["q"] ?? "").Trim();
+                
+                var foundRoles = db.Roles.ToList().Where(r => r.Name.Contains(searchReq, StringComparison.OrdinalIgnoreCase) || r.Description.Contains(searchReq, StringComparison.OrdinalIgnoreCase));
+                var foundDistricts = db.Districts.ToList().Where(d => d.Name.Contains(searchReq, StringComparison.OrdinalIgnoreCase) || d.Description.Contains(searchReq, StringComparison.OrdinalIgnoreCase));
+                var dataModel = new { roles = foundRoles, districts = foundDistricts };
+
+                HtmlTemplateRenderer renderer = new HtmlTemplateRenderer();
+                string template = File.ReadAllText("static/templates/search.html");
+                string contentHtml1 = renderer.RenderFromString4(template, dataModel);
+                string contentHtml2 = renderer.RenderFromString4(contentHtml1, dataModel);
+                switch (searchReq)
+                {
+                    case "кчау":
+                    case "kchau":
+                        contentHtml2 = "<img src=/images/kchau.jpg>"; break;
+                    case "aphex twin":
+                    case "афекс твин":
+                    case "windowlicker":
+                        contentHtml2 = "<img src=/images/aphextwin.jpg>"; break;
+                    case "pudge":
+                    case "пудж":
+                        contentHtml2 = "<img src=/images/pudge.jpg>"; break;
+                    case "скачать армяне":
+                        contentHtml2 = "<img src=/images/download_armanians.jpg>"; break;
+                    case "порно":
+                        contentHtml2 = "<img src=/images/not_today.jpg>"; break;
+                }
+
+                string layout = File.ReadAllText("static/layout.html");
+                string result = layout.Replace("{{Content}}", contentHtml2);
+                
+                return (result, 200);
+            }
+        }
     }
 }

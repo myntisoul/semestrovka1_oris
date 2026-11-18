@@ -407,3 +407,10 @@ C:\Users\artem\source\repos\semestrovka1_oris\semestrovka1_oris\semestrovka1_ori
 C:\Users\artem\source\repos\semestrovka1_oris\semestrovka1_oris\semestrovka1_oris\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
 C:\Users\artem\source\repos\semestrovka1_oris\semestrovka1_oris\semestrovka1_oris\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
 C:\Users\artem\source\repos\semestrovka1_oris\semestrovka1_oris\semestrovka1_oris\bin\Debug\net8.0\static\templates\rules.html
+C:\Users\artem\source\repos\semestrovka1_oris\semestrovka1_oris\semestrovka1_oris\bin\Debug\net8.0\static\templates\search.html
+C:\Users\artem\source\repos\semestrovka1_oris\semestrovka1_oris\semestrovka1_oris\bin\Debug\net8.0\static\images\kchau.jpg
+C:\Users\artem\source\repos\semestrovka1_oris\semestrovka1_oris\semestrovka1_oris\bin\Debug\net8.0\static\kchau.html
+C:\Users\artem\source\repos\semestrovka1_oris\semestrovka1_oris\semestrovka1_oris\bin\Debug\net8.0\static\images\aphextwin.jpg
+C:\Users\artem\source\repos\semestrovka1_oris\semestrovka1_oris\semestrovka1_oris\bin\Debug\net8.0\static\images\pudge.jpg
+C:\Users\artem\source\repos\semestrovka1_oris\semestrovka1_oris\semestrovka1_oris\bin\Debug\net8.0\static\images\download_armanians.jpg
+C:\Users\artem\source\repos\semestrovka1_oris\semestrovka1_oris\semestrovka1_oris\bin\Debug\net8.0\static\images\not_today.jpg
