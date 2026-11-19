@@ -12,12 +12,20 @@
                 <img src="/images/logo.png">
                 <h1>Цитадели Wiki</h1>
             </div>
-            <div class="search">
-                <input type="text" placeholder="Поиск">
-                <div class="search-btn"><p>Найти</p></div>
-            </div>
+            <form action="/wiki/search", method="get" class="search">
+                <input type="text" placeholder="Поиск" name="q">
+                <button type="submit" class="search-btn"><p>Найти</p></button>
+            </form>
+            <a href="/wiki/login"><div class="search-btn">Войти</div></a>
         </div>
         <div class="main-content">
+            <div class="menu">
+                <h3>Меню</h3>
+                <a href="http://127.0.0.1:8888/">Об игре</a>
+                <a href="/wiki/rules">Правила игры</a>
+                <a href="/wiki/roles">Карты ролей</a>
+                <a href="/wiki/districts">Карты районов</a>
+            </div>
             <div class="content-box">
                 <h2>Ошибка 404</h2>
                 <h3>Ресурс не найден</h3>

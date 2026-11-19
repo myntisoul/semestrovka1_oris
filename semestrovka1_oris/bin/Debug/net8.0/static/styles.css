@@ -5,6 +5,9 @@
     font-size: 18px;
     box-sizing: border-box;
 }
+a{
+    color: rgb(94, 61, 0);
+}
 h1
 {
     color: white;
@@ -200,4 +203,13 @@ body {
 .found{
     display: flex;
     flex-direction: column;
+}
+.found h4{
+    margin: 0;
+}
+.found form{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    gap: 20px;
 }

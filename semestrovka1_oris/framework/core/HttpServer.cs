@@ -63,11 +63,15 @@ public class HttpServer
                 string httpMethod = context.Request.HttpMethod;
                 NameValueCollection queryString = request.QueryString;
 
-                var (isHandledByController, responseHtml, statusCode) = await TryRoute(httpMethod, path, body, queryString);
+                var (isHandledByController, responseHtml, statusCode, redirect) = await TryRoute(httpMethod, path, body, queryString);
 
                 if (isHandledByController)
                 {
                     context.Response.StatusCode = statusCode;
+                    if (!string.IsNullOrEmpty(redirect))
+                    {
+                        context.Response.RedirectLocation = redirect;
+                    }
 
                     if (!string.IsNullOrEmpty(responseHtml))
                     {
@@ -141,12 +145,12 @@ public class HttpServer
         }
     }
 
-    public async Task<(bool isHandled, string responseHtml, int code)> TryRoute(string httpMethod, string path, string body, NameValueCollection queryString)
+    public async Task<(bool isHandled, string responseHtml, int code, string redirectionLocation)> TryRoute(string httpMethod, string path, string body, NameValueCollection queryString)
     {
-        if (path.Contains(".") || path == "/") return (false, null, 200);
+        if (path.Contains(".") || path == "/") return (false, null, 200, null);
 
         string[] segments = path.Split('/', StringSplitOptions.RemoveEmptyEntries);
-        if (segments.Length == 0) return (false, null, 200);
+        if (segments.Length == 0) return (false, null, 200, null);
 
         string controllerName = segments[0];
         string actionName = segments.Length > 1 ? segments[1] : "index";
@@ -160,14 +164,14 @@ public class HttpServer
                 return (name ?? c.Name.Replace("Controller", "")).ToLower() == controllerName.ToLower();
             });
 
-        if (controller == null) return (false, null, 200);
+        if (controller == null) return (false, null, 200, null);
 
         var method = controller.GetMethods()
             .Where(t => t.Name.ToLower() == actionName.ToLower())
             .FirstOrDefault(t => t.GetCustomAttributes(true)
                 .Any(attr => string.Equals(attr.GetType().Name, $"Http{httpMethod}", StringComparison.OrdinalIgnoreCase)));
 
-        if (method == null) return (false, null, 200);
+        if (method == null) return (false, null, 200, null);
 
         NameValueCollection form = new NameValueCollection();
         if (httpMethod == "POST" || httpMethod == "PUT")
@@ -207,11 +211,28 @@ public class HttpServer
             ret = resultProp?.GetValue(task);
         }
 
+        if (ret is ValueTuple<string, int, string> redirectTuple)
+        {
+            return (
+                true,
+                redirectTuple.Item1,
+                redirectTuple.Item2,
+                redirectTuple.Item3
+            );
+        }
+
         if (ret is ValueTuple<string, int> resultTuple)
-            return (true, resultTuple.Item1, resultTuple.Item2);
+        {
+            return (
+                true,
+                resultTuple.Item1,
+                resultTuple.Item2,
+                null
+            );
+        }
 
         string responseHtml = ret?.ToString();
-        return (true, responseHtml, 200);
+        return (true, responseHtml, 200, null);
     }
 }
 
