@@ -136,5 +136,19 @@ namespace semestrovka1_oris.framework.core
             string result = layout.Replace("{{Content}}", contentHtml);
             return (result, 200);
         }
+        [HttpGET]
+        public async Task<(string, int, string)> WrongLogin(NameValueCollection query)
+        {
+            string content = File.ReadAllText("static/wrong_login.html");
+            string result = layout.Replace("{{Content}}", content);
+            return (result, 200, "");
+        }
+        [HttpGET]
+        public async Task<(string, int, string)> Register(NameValueCollection query)
+        {
+            string content = File.ReadAllText("static/register.html");
+            string result = layout.Replace("{{Content}}", content);
+            return (result, 200, "");
+        }
     }
 }

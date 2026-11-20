@@ -409,7 +409,6 @@ C:\Users\artem\source\repos\semestrovka1_oris\semestrovka1_oris\semestrovka1_ori
 C:\Users\artem\source\repos\semestrovka1_oris\semestrovka1_oris\semestrovka1_oris\bin\Debug\net8.0\static\templates\rules.html
 C:\Users\artem\source\repos\semestrovka1_oris\semestrovka1_oris\semestrovka1_oris\bin\Debug\net8.0\static\templates\search.html
 C:\Users\artem\source\repos\semestrovka1_oris\semestrovka1_oris\semestrovka1_oris\bin\Debug\net8.0\static\images\kchau.jpg
-C:\Users\artem\source\repos\semestrovka1_oris\semestrovka1_oris\semestrovka1_oris\bin\Debug\net8.0\static\kchau.html
 C:\Users\artem\source\repos\semestrovka1_oris\semestrovka1_oris\semestrovka1_oris\bin\Debug\net8.0\static\images\aphextwin.jpg
 C:\Users\artem\source\repos\semestrovka1_oris\semestrovka1_oris\semestrovka1_oris\bin\Debug\net8.0\static\images\pudge.jpg
 C:\Users\artem\source\repos\semestrovka1_oris\semestrovka1_oris\semestrovka1_oris\bin\Debug\net8.0\static\images\download_armanians.jpg
@@ -461,3 +460,7 @@ F:\artem\itis\semestrovka1_oris\semestrovka1_oris\bin\Debug\net8.0\runtimes\win\
 F:\artem\itis\semestrovka1_oris\semestrovka1_oris\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
 F:\artem\itis\semestrovka1_oris\semestrovka1_oris\bin\Debug\net8.0\static\images\aphextwin.png
 F:\artem\itis\semestrovka1_oris\semestrovka1_oris\bin\Debug\net8.0\static\login.html
+C:\Users\artem\source\repos\semestrovka1_oris\semestrovka1_oris\semestrovka1_oris\bin\Debug\net8.0\static\images\aphextwin.png
+C:\Users\artem\source\repos\semestrovka1_oris\semestrovka1_oris\semestrovka1_oris\bin\Debug\net8.0\static\login.html
+C:\Users\artem\source\repos\semestrovka1_oris\semestrovka1_oris\semestrovka1_oris\bin\Debug\net8.0\static\register.html
+C:\Users\artem\source\repos\semestrovka1_oris\semestrovka1_oris\semestrovka1_oris\bin\Debug\net8.0\static\wrong_login.html

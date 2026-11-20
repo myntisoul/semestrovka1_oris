@@ -9,17 +9,6 @@ namespace ORM
     public sealed class OrmContext : IOrmContext
     {
         private readonly string _connectionString;
-
-        /// <summary>
-        /// Создаёт экземпляр контекста для работы
-        /// с базой данных SQL Server.
-        /// </summary>
-        /// <param name="connectionString">
-        /// Строка подключения к базе данных.
-        /// </param>
-        /// <exception cref="ArgumentException">
-        /// Строка подключения не задана.
-        /// </exception>
         public OrmContext(string connectionString)
         {
             ArgumentException.ThrowIfNullOrWhiteSpace(
@@ -28,7 +17,6 @@ namespace ORM
             _connectionString = connectionString;
         }
 
-        /// <inheritdoc />
         public async Task<IReadOnlyList<T>> GetAllAsync<T>(
             string tableName,
             CancellationToken cancellationToken = default)
@@ -117,18 +105,6 @@ namespace ORM
             return result;
         }
 
-        /// <summary>
-        /// Проверяет имя SQL-идентификатора и экранирует его.
-        /// </summary>
-        /// <param name="identifier">
-        /// Имя таблицы или столбца.
-        /// </param>
-        /// <returns>
-        /// Проверенный SQL-идентификатор в квадратных скобках.
-        /// </returns>
-        /// <exception cref="ArgumentException">
-        /// Имя идентификатора имеет недопустимый формат.
-        /// </exception>
         private static string EscapeIdentifier(string identifier)
         {
             if (string.IsNullOrWhiteSpace(identifier) ||
@@ -144,7 +120,6 @@ namespace ORM
             return $"[{identifier}]";
         }
 
-        /// <inheritdoc />
         public async Task<int> InsertAsync<T>(
             string tableName,
             T entity,
@@ -180,7 +155,6 @@ namespace ORM
             return 0;
         }
 
-        /// <inheritdoc />
         public async Task<int> DeleteAsync(
             string tableName,
             int id,
@@ -196,7 +170,6 @@ namespace ORM
             return rowsAffected;
         }
 
-        /// <inheritdoc />
         public async Task<int> UpdateAsync<T>(
             string tableName,
             int id,

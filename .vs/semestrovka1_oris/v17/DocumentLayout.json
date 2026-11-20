@@ -1,33 +1,33 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "F:\\artem\\itis\\semestrovka1_oris\\",
+  "WorkspaceRootPath": "C:\\Users\\artem\\source\\repos\\semestrovka1_oris\\semestrovka1_oris\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{324B57EF-C1A3-4117-B599-7371691CF4F8}|semestrovka1_oris\\semestrovka1_oris.csproj|f:\\artem\\itis\\semestrovka1_oris\\semestrovka1_oris\\framework\\core\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{324B57EF-C1A3-4117-B599-7371691CF4F8}|semestrovka1_oris\\semestrovka1_oris.csproj|c:\\users\\artem\\source\\repos\\semestrovka1_oris\\semestrovka1_oris\\semestrovka1_oris\\framework\\core\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{324B57EF-C1A3-4117-B599-7371691CF4F8}|semestrovka1_oris\\semestrovka1_oris.csproj|solutionrelative:semestrovka1_oris\\framework\\core\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{324B57EF-C1A3-4117-B599-7371691CF4F8}|semestrovka1_oris\\semestrovka1_oris.csproj|f:\\artem\\itis\\semestrovka1_oris\\semestrovka1_oris\\framework\\core\\httpserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{324B57EF-C1A3-4117-B599-7371691CF4F8}|semestrovka1_oris\\semestrovka1_oris.csproj|solutionrelative:semestrovka1_oris\\framework\\core\\httpserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{324B57EF-C1A3-4117-B599-7371691CF4F8}|semestrovka1_oris\\semestrovka1_oris.csproj|f:\\artem\\itis\\semestrovka1_oris\\semestrovka1_oris\\framework\\core\\wikicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{324B57EF-C1A3-4117-B599-7371691CF4F8}|semestrovka1_oris\\semestrovka1_oris.csproj|c:\\users\\artem\\source\\repos\\semestrovka1_oris\\semestrovka1_oris\\semestrovka1_oris\\framework\\core\\wikicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{324B57EF-C1A3-4117-B599-7371691CF4F8}|semestrovka1_oris\\semestrovka1_oris.csproj|solutionrelative:semestrovka1_oris\\framework\\core\\wikicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{324B57EF-C1A3-4117-B599-7371691CF4F8}|semestrovka1_oris\\semestrovka1_oris.csproj|f:\\artem\\itis\\semestrovka1_oris\\semestrovka1_oris\\framework\\core\\usersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{324B57EF-C1A3-4117-B599-7371691CF4F8}|semestrovka1_oris\\semestrovka1_oris.csproj|solutionrelative:semestrovka1_oris\\framework\\core\\usersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{324B57EF-C1A3-4117-B599-7371691CF4F8}|semestrovka1_oris\\semestrovka1_oris.csproj|c:\\users\\artem\\source\\repos\\semestrovka1_oris\\semestrovka1_oris\\semestrovka1_oris\\framework\\core\\httpserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{324B57EF-C1A3-4117-B599-7371691CF4F8}|semestrovka1_oris\\semestrovka1_oris.csproj|solutionrelative:semestrovka1_oris\\framework\\core\\httpserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{324B57EF-C1A3-4117-B599-7371691CF4F8}|semestrovka1_oris\\semestrovka1_oris.csproj|f:\\artem\\itis\\semestrovka1_oris\\semestrovka1_oris\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{324B57EF-C1A3-4117-B599-7371691CF4F8}|semestrovka1_oris\\semestrovka1_oris.csproj|c:\\users\\artem\\source\\repos\\semestrovka1_oris\\semestrovka1_oris\\semestrovka1_oris\\orm\\ormcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{324B57EF-C1A3-4117-B599-7371691CF4F8}|semestrovka1_oris\\semestrovka1_oris.csproj|solutionrelative:semestrovka1_oris\\orm\\ormcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{324B57EF-C1A3-4117-B599-7371691CF4F8}|semestrovka1_oris\\semestrovka1_oris.csproj|c:\\users\\artem\\source\\repos\\semestrovka1_oris\\semestrovka1_oris\\semestrovka1_oris\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{324B57EF-C1A3-4117-B599-7371691CF4F8}|semestrovka1_oris\\semestrovka1_oris.csproj|solutionrelative:semestrovka1_oris\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{324B57EF-C1A3-4117-B599-7371691CF4F8}|semestrovka1_oris\\semestrovka1_oris.csproj|f:\\artem\\itis\\semestrovka1_oris\\semestrovka1_oris\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{324B57EF-C1A3-4117-B599-7371691CF4F8}|semestrovka1_oris\\semestrovka1_oris.csproj|c:\\users\\artem\\source\\repos\\semestrovka1_oris\\semestrovka1_oris\\semestrovka1_oris\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{324B57EF-C1A3-4117-B599-7371691CF4F8}|semestrovka1_oris\\semestrovka1_oris.csproj|solutionrelative:semestrovka1_oris\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{324B57EF-C1A3-4117-B599-7371691CF4F8}|semestrovka1_oris\\semestrovka1_oris.csproj|f:\\artem\\itis\\semestrovka1_oris\\semestrovka1_oris\\orm\\iormcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{324B57EF-C1A3-4117-B599-7371691CF4F8}|semestrovka1_oris\\semestrovka1_oris.csproj|c:\\users\\artem\\source\\repos\\semestrovka1_oris\\semestrovka1_oris\\semestrovka1_oris\\orm\\iormcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{324B57EF-C1A3-4117-B599-7371691CF4F8}|semestrovka1_oris\\semestrovka1_oris.csproj|solutionrelative:semestrovka1_oris\\orm\\iormcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -46,39 +46,38 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IOrmContext.cs",
-              "DocumentMoniker": "F:\\artem\\itis\\semestrovka1_oris\\semestrovka1_oris\\ORM\\IOrmContext.cs",
-              "RelativeDocumentMoniker": "semestrovka1_oris\\ORM\\IOrmContext.cs",
-              "ToolTip": "F:\\artem\\itis\\semestrovka1_oris\\semestrovka1_oris\\ORM\\IOrmContext.cs",
-              "RelativeToolTip": "semestrovka1_oris\\ORM\\IOrmContext.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "OrmContext.cs",
+              "DocumentMoniker": "C:\\Users\\artem\\source\\repos\\semestrovka1_oris\\semestrovka1_oris\\semestrovka1_oris\\ORM\\OrmContext.cs",
+              "RelativeDocumentMoniker": "semestrovka1_oris\\ORM\\OrmContext.cs",
+              "ToolTip": "C:\\Users\\artem\\source\\repos\\semestrovka1_oris\\semestrovka1_oris\\semestrovka1_oris\\ORM\\OrmContext.cs",
+              "RelativeToolTip": "semestrovka1_oris\\ORM\\OrmContext.cs",
+              "ViewState": "AgIAALAAAAAAAAAAAAAswKsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-19T17:48:49.505Z",
+              "WhenOpened": "2026-11-20T11:21:32.854Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UsersRepository.cs",
-              "DocumentMoniker": "F:\\artem\\itis\\semestrovka1_oris\\semestrovka1_oris\\framework\\core\\UsersRepository.cs",
-              "RelativeDocumentMoniker": "semestrovka1_oris\\framework\\core\\UsersRepository.cs",
-              "ToolTip": "F:\\artem\\itis\\semestrovka1_oris\\semestrovka1_oris\\framework\\core\\UsersRepository.cs",
-              "RelativeToolTip": "semestrovka1_oris\\framework\\core\\UsersRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAA5AAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "IOrmContext.cs",
+              "DocumentMoniker": "C:\\Users\\artem\\source\\repos\\semestrovka1_oris\\semestrovka1_oris\\semestrovka1_oris\\ORM\\IOrmContext.cs",
+              "RelativeDocumentMoniker": "semestrovka1_oris\\ORM\\IOrmContext.cs",
+              "ToolTip": "C:\\Users\\artem\\source\\repos\\semestrovka1_oris\\semestrovka1_oris\\semestrovka1_oris\\ORM\\IOrmContext.cs",
+              "RelativeToolTip": "semestrovka1_oris\\ORM\\IOrmContext.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-19T17:48:26.51Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-19T17:48:49.505Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "AuthController.cs",
-              "DocumentMoniker": "F:\\artem\\itis\\semestrovka1_oris\\semestrovka1_oris\\framework\\core\\AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\artem\\source\\repos\\semestrovka1_oris\\semestrovka1_oris\\semestrovka1_oris\\framework\\core\\AuthController.cs",
               "RelativeDocumentMoniker": "semestrovka1_oris\\framework\\core\\AuthController.cs",
-              "ToolTip": "F:\\artem\\itis\\semestrovka1_oris\\semestrovka1_oris\\framework\\core\\AuthController.cs",
+              "ToolTip": "C:\\Users\\artem\\source\\repos\\semestrovka1_oris\\semestrovka1_oris\\semestrovka1_oris\\framework\\core\\AuthController.cs",
               "RelativeToolTip": "semestrovka1_oris\\framework\\core\\AuthController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACYAAAAAAAAAAAAiwDUAAABfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-19T16:59:16.782Z",
               "EditorCaption": ""
@@ -87,9 +86,9 @@
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "User.cs",
-              "DocumentMoniker": "F:\\artem\\itis\\semestrovka1_oris\\semestrovka1_oris\\models\\User.cs",
+              "DocumentMoniker": "C:\\Users\\artem\\source\\repos\\semestrovka1_oris\\semestrovka1_oris\\semestrovka1_oris\\models\\User.cs",
               "RelativeDocumentMoniker": "semestrovka1_oris\\models\\User.cs",
-              "ToolTip": "F:\\artem\\itis\\semestrovka1_oris\\semestrovka1_oris\\models\\User.cs",
+              "ToolTip": "C:\\Users\\artem\\source\\repos\\semestrovka1_oris\\semestrovka1_oris\\semestrovka1_oris\\models\\User.cs",
               "RelativeToolTip": "semestrovka1_oris\\models\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -100,9 +99,9 @@
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "Program.cs",
-              "DocumentMoniker": "F:\\artem\\itis\\semestrovka1_oris\\semestrovka1_oris\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\artem\\source\\repos\\semestrovka1_oris\\semestrovka1_oris\\semestrovka1_oris\\Program.cs",
               "RelativeDocumentMoniker": "semestrovka1_oris\\Program.cs",
-              "ToolTip": "F:\\artem\\itis\\semestrovka1_oris\\semestrovka1_oris\\Program.cs",
+              "ToolTip": "C:\\Users\\artem\\source\\repos\\semestrovka1_oris\\semestrovka1_oris\\semestrovka1_oris\\Program.cs",
               "RelativeToolTip": "semestrovka1_oris\\Program.cs",
               "ViewState": "AgIAAEAAAAAAAAAAAAAwwFQAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -111,26 +110,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "WikiController.cs",
-              "DocumentMoniker": "F:\\artem\\itis\\semestrovka1_oris\\semestrovka1_oris\\framework\\core\\WikiController.cs",
+              "DocumentMoniker": "C:\\Users\\artem\\source\\repos\\semestrovka1_oris\\semestrovka1_oris\\semestrovka1_oris\\framework\\core\\WikiController.cs",
               "RelativeDocumentMoniker": "semestrovka1_oris\\framework\\core\\WikiController.cs",
-              "ToolTip": "F:\\artem\\itis\\semestrovka1_oris\\semestrovka1_oris\\framework\\core\\WikiController.cs",
+              "ToolTip": "C:\\Users\\artem\\source\\repos\\semestrovka1_oris\\semestrovka1_oris\\semestrovka1_oris\\framework\\core\\WikiController.cs",
               "RelativeToolTip": "semestrovka1_oris\\framework\\core\\WikiController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAA/AAAAAAAAAA==",
+              "ViewState": "AgIAAHwAAAAAAAAAAAAqwJUAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-06T12:15:19.613Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "HttpServer.cs",
-              "DocumentMoniker": "F:\\artem\\itis\\semestrovka1_oris\\semestrovka1_oris\\framework\\core\\HttpServer.cs",
+              "DocumentMoniker": "C:\\Users\\artem\\source\\repos\\semestrovka1_oris\\semestrovka1_oris\\semestrovka1_oris\\framework\\core\\HttpServer.cs",
               "RelativeDocumentMoniker": "semestrovka1_oris\\framework\\core\\HttpServer.cs",
-              "ToolTip": "F:\\artem\\itis\\semestrovka1_oris\\semestrovka1_oris\\framework\\core\\HttpServer.cs",
+              "ToolTip": "C:\\Users\\artem\\source\\repos\\semestrovka1_oris\\semestrovka1_oris\\semestrovka1_oris\\framework\\core\\HttpServer.cs",
               "RelativeToolTip": "semestrovka1_oris\\framework\\core\\HttpServer.cs",
-              "ViewState": "AgIAAI0AAAAAAAAAAAAvwEkAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAKUAAAAAAAAAAADgv0kAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-03T12:02:22.027Z",
               "EditorCaption": ""
