@@ -22,9 +22,6 @@ docker compose down
 docker compose logs -f
 
 ### Проверка состояния контейнеров
-
-```powershell
 docker compose ps -a
-```
 
 Данные базы хранятся в Docker volume и сохраняются между обычными перезапусками контейнеров.
