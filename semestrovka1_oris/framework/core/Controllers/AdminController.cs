@@ -30,6 +30,14 @@ namespace semestrovka1_oris.framework.core.Controllers
             return ("", 303, "/admin/adminpanel");
         }
         [HttpPOST]
+        public async Task<(string, int, string)> DeleteDistrict(NameValueCollection query)
+        {
+            DistrictsRepository rep = new DistrictsRepository(orm);
+            if (!int.TryParse(query["id"], out int id)) return ("400", 400, "");
+            await rep.DeleteAsync(id);
+            return ("", 303, "/admin/adminpanel");
+        }
+        [HttpPOST]
         public async Task<(string, int, string)> InsertRole(NameValueCollection query, UploadedFile? image)
         {
             if (!int.TryParse(query["turnOrder"], out int turnOrder) || turnOrder < 1)
