@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("semestrovka1_oris")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d43bfeed8c5f5499b75b88241273a69032590710")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6ffe7d07e19a488ecfa50de18d076fdd78805ee3")]
 [assembly: System.Reflection.AssemblyProductAttribute("semestrovka1_oris")]
 [assembly: System.Reflection.AssemblyTitleAttribute("semestrovka1_oris")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
