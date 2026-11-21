@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36908.2 d17.14
+VisualStudioVersion = 17.14.36908.2
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "semestrovka1_oris", "semestrovka1_oris\semestrovka1_oris.csproj", "{324B57EF-C1A3-4117-B599-7371691CF4F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Semestrovka.Tests", "semestrovka1_oris\tests\Semestrovka.Tests.csproj", "{5C145378-36FC-B1C7-948A-B85A518AD129}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{324B57EF-C1A3-4117-B599-7371691CF4F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{324B57EF-C1A3-4117-B599-7371691CF4F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{324B57EF-C1A3-4117-B599-7371691CF4F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C145378-36FC-B1C7-948A-B85A518AD129}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C145378-36FC-B1C7-948A-B85A518AD129}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C145378-36FC-B1C7-948A-B85A518AD129}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C145378-36FC-B1C7-948A-B85A518AD129}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

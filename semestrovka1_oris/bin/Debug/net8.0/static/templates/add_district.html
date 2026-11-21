@@ -1,0 +1,23 @@
+<h2>Добавление района</h2>
+<div class="found">
+    <form method="post" action="/admin/insertdistrict" enctype="multipart/form-data">
+        <h4>Название</h4>
+        <input type="text" name="name" placeholder="Название района">
+        <h4>Описание</h4>
+        <input type="text" name="description" placeholder="Описание района">
+        <h4>Стоимость</h4>
+        <input type="number" name="cost" min="1" max="100" step="1" required placeholder="Стоимость">
+        <h4>Количество карт в стопке</h4>
+        <input type="number" name="quantity" min="1" max="100" step="1" required placeholder="Количество">
+        <select name="color">
+            <option value="Желтый">Жёлтый</option>
+            <option value="Синий">Синий</option>
+            <option value="Зеленый">Зелёный</option>
+            <option value="Красный">Красный</option>
+            <option value="Фиолетовый">Фиолетовый</option>
+        </select>
+        <h4>Изображение</h4>
+        <input type="file" name="image" required placeholder="Карточка района" accept="image/png,image/jpeg,image/webp">
+        <button type="submit">Сохранить</button>
+    </form>
+</div>

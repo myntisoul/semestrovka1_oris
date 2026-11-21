@@ -1,0 +1,7 @@
+.git
+.vs
+.env
+.env.*
+bin
+obj
+tests

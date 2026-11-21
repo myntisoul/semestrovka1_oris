@@ -1,5 +1,6 @@
 ﻿using semestrovka1_oris.framework.core;
 using System.Net;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Text.Json;
 using ORM;
@@ -85,14 +86,34 @@ namespace semestrovka1_oris
             //}   
 
             HttpServer server = new HttpServer();
-            server.Start();
-            Console.WriteLine("write 'stop' to stop the server");
-            Console.WriteLine("http://127.0.0.1:8888/");
-            while (true)
+            var shutdown = new TaskCompletionSource(TaskCreationOptions.RunContinuationsAsynchronously);
+            using var sigterm = OperatingSystem.IsWindows() ? null : PosixSignalRegistration.Create(
+                PosixSignal.SIGTERM, context =>
+                {
+                    context.Cancel = true;
+                    shutdown.TrySetResult();
+                });
+            Console.CancelKeyPress += (_, args) =>
             {
-                string command = Console.ReadLine();
-                if (command == "stop") { server.Stop(); break; }
-            }
+                args.Cancel = true;
+                shutdown.TrySetResult();
+            };
+
+            server.Start();
+            Console.WriteLine("started");
+            //Console.WriteLine("write 'stop' to stop the server");
+            //_ = Task.Run(() =>
+            //{
+            //    while (Console.ReadLine() is { } command)
+            //        if (command == "stop")
+            //        {
+            //            shutdown.TrySetResult();
+            //            break;
+            //        }
+            //});
+            await Task.Delay(Timeout.Infinite);
+            await shutdown.Task;
+            server.Stop();
         }
     }
 }

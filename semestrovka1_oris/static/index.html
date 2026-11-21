@@ -3,7 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title>Цитадели Wiki</title>
-        <link rel="stylesheet" href="styles.css"> 
+        <link rel="stylesheet" href="/styles.css">
+        <script src="/search.js" defer></script>
     </head>
     <body>
         <div class="header">
@@ -11,7 +12,7 @@
                 <img src="images/logo.png">
                 <h1>Цитадели Wiki</h1>
             </div>
-            <form action="/wiki/search", method="get" class="search">
+            <form action="/wiki/search" method="get" class="search">
                 <input type="text" placeholder="Поиск" name="q">
                 <button type="submit" class="search-btn"><p>Найти</p></button>
             </form>
@@ -20,12 +21,14 @@
         <div class="main-content">
             <div class="menu">
                 <h3>Меню</h3>
-                <a href="http://127.0.0.1:8888/">Об игре</a>
+                <a href="/">Об игре</a>
                 <a href="/wiki/rules">Правила игры</a>
                 <a href="/wiki/roles">Карты ролей</a>
                 <a href="/wiki/districts">Карты районов</a>
             </div>
             <div class="content-box">
+                <p id="search-status" role="status" hidden></p>
+                <div id="wiki-content">
                 <h2>Цитадели</h2>
                 <div class="box-img">
                     <div class="box-img-header">
@@ -120,6 +123,7 @@
                         <img src="images/ad655113d843581c4c57212738198d80.webp">   
                         <img src="images/pil_citadeli_2022_01_s-1200x800.jpg">
                     </div> 
+                </div>
                 </div>
             </div>
         </div>

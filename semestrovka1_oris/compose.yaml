@@ -1,0 +1,49 @@
+x-sql-image: &sql-image mcr.microsoft.com/mssql/server:2022-latest
+x-sql-password: &sql-password ${MSSQL_SA_PASSWORD:-OrisLocal!2026}
+
+services:
+  db:
+    image: *sql-image
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: Developer
+      MSSQL_SA_PASSWORD: *sql-password
+    volumes:
+      - sql_data:/var/opt/mssql
+    healthcheck:
+      test: ["CMD-SHELL", "SQLCMDPASSWORD=\"$$MSSQL_SA_PASSWORD\" /opt/mssql-tools18/bin/sqlcmd -S localhost -U sa -C -b -l 3 -Q 'SELECT 1' >/dev/null"]
+      interval: 5s
+      timeout: 5s
+      retries: 24
+      start_period: 20s
+
+  db-init:
+    image: *sql-image
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      SQLCMDPASSWORD: *sql-password
+    entrypoint: ["/bin/bash", "/database/init.sh"]
+    volumes:
+      - ./database:/database:ro
+
+  app:
+    build: .
+    init: true
+    depends_on:
+      db-init:
+        condition: service_completed_successfully
+    environment:
+      ORIS_SQL_SERVER: db,1433
+      MSSQL_SA_PASSWORD: *sql-password
+    ports:
+      - "127.0.0.1:${ORIS_HTTP_PORT:-8888}:8888"
+    volumes:
+      - role_images:/app/static/images/roles
+      - district_images:/app/static/images/districts
+
+volumes:
+  sql_data:
+  role_images:
+  district_images:

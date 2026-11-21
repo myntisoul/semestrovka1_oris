@@ -9,6 +9,7 @@ namespace semestrovka1_oris.models
     public class Role
     {
         public int Id { get; set; }
+        public int TurnOrder { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public string ImageURL { get; set; }

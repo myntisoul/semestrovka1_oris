@@ -1,0 +1,14 @@
+<h2>Добавление роли</h2>
+<div class="found">
+    <form method="post" action="/admin/insertrole" enctype="multipart/form-data">
+        <h4>Имя</h4>
+        <input type="text" name="name" placeholder="Имя роли">
+        <h4>Описание</h4>
+        <input type="text" name="description" placeholder="Описание роли">
+        <label for="turn-order">Очерёдность хода</label>
+        <input type="number" id="turn-order" name="turnOrder" min="1" max="2147483647" step="1" required>
+        <h4>Изображение</h4>
+        <input type="file" name="image" required placeholder="Карточка роли" required>
+        <button type="submit">Сохранить</button>
+    </form>
+</div>

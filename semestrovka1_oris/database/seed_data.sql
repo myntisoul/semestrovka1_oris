@@ -1,39 +1,61 @@
-﻿USE [OrisDb];
+USE [OrisDb];
+GO
+
+-- Обновление существующей таблицы перед заполнением начальными данными.
+SET XACT_ABORT ON;
+BEGIN TRANSACTION;
+
+IF COL_LENGTH(N'dbo.Roles', N'TurnOrder') IS NULL
+    ALTER TABLE dbo.Roles ADD TurnOrder INT NULL;
+
+EXEC (N'
+    UPDATE dbo.Roles
+    SET TurnOrder = Id
+    WHERE TurnOrder IS NULL OR TurnOrder <= 0;
+
+    IF COLUMNPROPERTY(OBJECT_ID(N''dbo.Roles''), N''TurnOrder'', ''AllowsNull'') = 1
+        ALTER TABLE dbo.Roles ALTER COLUMN TurnOrder INT NOT NULL;
+
+    IF OBJECT_ID(N''dbo.CK_Roles_TurnOrder'', N''C'') IS NULL
+        ALTER TABLE dbo.Roles ADD CONSTRAINT CK_Roles_TurnOrder CHECK (TurnOrder > 0);
+');
+
+COMMIT TRANSACTION;
 GO
 
 SET IDENTITY_INSERT dbo.Roles ON;
 
 IF NOT EXISTS (SELECT 1 FROM dbo.Roles WHERE Id = 1)
-    INSERT INTO dbo.Roles (Id, Name, [Description], ImageURL)
-    VALUES (1, N'Убийца', N'Выводит любого персонажа из игры на один раунд', N'/images/roles/assassin.png');
+    INSERT INTO dbo.Roles (Id, TurnOrder, Name, [Description], ImageURL)
+    VALUES (1, 1, N'Убийца', N'Выводит любого персонажа из игры на один раунд', N'/images/roles/assassin.png');
 
 IF NOT EXISTS (SELECT 1 FROM dbo.Roles WHERE Id = 2)
-    INSERT INTO dbo.Roles (Id, Name, [Description], ImageURL)
-    VALUES (2, N'Вор', N'Cпособен украсть золото у другого персонажа (кроме Ассасина и его жертвы)', N'/images/roles/thief.png');
+    INSERT INTO dbo.Roles (Id, TurnOrder, Name, [Description], ImageURL)
+    VALUES (2, 2, N'Вор', N'Cпособен украсть золото у другого персонажа (кроме Ассасина и его жертвы)', N'/images/roles/thief.png');
 
 IF NOT EXISTS (SELECT 1 FROM dbo.Roles WHERE Id = 3)
-    INSERT INTO dbo.Roles (Id, Name, [Description], ImageURL)
-    VALUES (3, N'Маг', N'Даёт возможность получить новые карты из колоды в обмен на свои, либо обменять все имеющиеся у себя в руке карты на все карты, имеющиеся в руке у другого игрока.', N'/images/roles/magician.png');
+    INSERT INTO dbo.Roles (Id, TurnOrder, Name, [Description], ImageURL)
+    VALUES (3, 3, N'Маг', N'Даёт возможность получить новые карты из колоды в обмен на свои, либо обменять все имеющиеся у себя в руке карты на все карты, имеющиеся в руке у другого игрока.', N'/images/roles/magician.png');
 
 IF NOT EXISTS (SELECT 1 FROM dbo.Roles WHERE Id = 4)
-    INSERT INTO dbo.Roles (Id, Name, [Description], ImageURL)
-    VALUES (4, N'Король', N'Получает дополнительный доход со своих дворянских кварталов (жёлтого цвета) и позволяет владельцу получить корону и первым совершать выбор персонажа в следующем раунде.', N'/images/roles/king.png');
+    INSERT INTO dbo.Roles (Id, TurnOrder, Name, [Description], ImageURL)
+    VALUES (4, 4, N'Король', N'Получает дополнительный доход со своих дворянских кварталов (жёлтого цвета) и позволяет владельцу получить корону и первым совершать выбор персонажа в следующем раунде.', N'/images/roles/king.png');
 
 IF NOT EXISTS (SELECT 1 FROM dbo.Roles WHERE Id = 5)
-    INSERT INTO dbo.Roles (Id, Name, [Description], ImageURL)
-    VALUES (5, N'Епископ', N'Получает защиту зданий от разрушения в этот раунд и получает монету за каждый церковный (синий) квартал в своем городе.', N'/images/roles/bishop.png');
+    INSERT INTO dbo.Roles (Id, TurnOrder, Name, [Description], ImageURL)
+    VALUES (5, 5, N'Епископ', N'Получает защиту зданий от разрушения в этот раунд и получает монету за каждый церковный (синий) квартал в своем городе.', N'/images/roles/bishop.png');
 
 IF NOT EXISTS (SELECT 1 FROM dbo.Roles WHERE Id = 6)
-    INSERT INTO dbo.Roles (Id, Name, [Description], ImageURL)
-    VALUES (6, N'Торговец', N'Автоматически получает дополнительный денежный бонус в 1 монету и доход со своих кварталов зелёного цвета.', N'/images/roles/trader.png');
+    INSERT INTO dbo.Roles (Id, TurnOrder, Name, [Description], ImageURL)
+    VALUES (6, 6, N'Торговец', N'Автоматически получает дополнительный денежный бонус в 1 монету и доход со своих кварталов зелёного цвета.', N'/images/roles/trader.png');
 
 IF NOT EXISTS (SELECT 1 FROM dbo.Roles WHERE Id = 7)
-    INSERT INTO dbo.Roles (Id, Name, [Description], ImageURL)
-    VALUES (7, N'Архитектор', N'Автоматически получает дополнительные два квартала из колоды после совершения действия (то есть после взятия денег или карт кварталов перед постройкой) и может построить вплоть до трёх кварталов (остальные персонажи строят только один квартал в ход).', N'/images/roles/architect.png');
+    INSERT INTO dbo.Roles (Id, TurnOrder, Name, [Description], ImageURL)
+    VALUES (7, 7, N'Архитектор', N'Автоматически получает дополнительные два квартала из колоды после совершения действия (то есть после взятия денег или карт кварталов перед постройкой) и может построить вплоть до трёх кварталов (остальные персонажи строят только один квартал в ход).', N'/images/roles/architect.png');
 
 IF NOT EXISTS (SELECT 1 FROM dbo.Roles WHERE Id = 8)
-    INSERT INTO dbo.Roles (Id, Name, [Description], ImageURL)
-    VALUES (8, N'Военачальник', N'Получает 1 монету за каждый военный (красный) квартал. В конце своего хода может разрушить здание любого игрока (кроме Епископа) за плату, на 1 монету меньшую, чем стоимость постройки квартала. Кварталы стоимостью 1 можно разрушать бесплатно.', N'/images/roles/condotier.png');
+    INSERT INTO dbo.Roles (Id, TurnOrder, Name, [Description], ImageURL)
+    VALUES (8, 8, N'Военачальник', N'Получает 1 монету за каждый военный (красный) квартал. В конце своего хода может разрушить здание любого игрока (кроме Епископа) за плату, на 1 монету меньшую, чем стоимость постройки квартала. Кварталы стоимостью 1 можно разрушать бесплатно.', N'/images/roles/condotier.png');
 
 SET IDENTITY_INSERT dbo.Roles OFF;
 GO
@@ -155,8 +177,48 @@ IF NOT EXISTS (SELECT 1 FROM dbo.Districts WHERE Id = 28)
 SET IDENTITY_INSERT dbo.Districts OFF;
 GO
 
+INSERT INTO dbo.GameRules (Title, Description, Category)
+SELECT seed.Title, seed.Description, seed.Category
+FROM (VALUES
+(
+    N'Выбор персонажей',
+    N'В начале каждого раунда игроки по очереди выбирают персонажей. Каждый персонаж обладает уникальным свойством.',
+    N'Ход игры'
+),
+(
+    N'Получение ресурсов',
+    N'В начале своего хода игрок либо получает 2 золотых, либо берёт 2 карты кварталов, оставляя себе одну.',
+    N'Ход игры'
+),
+(
+    N'Строительство кварталов',
+    N'В свой ход игрок может построить один квартал, заплатив его стоимость золотом.',
+    N'Строительство'
+),
+(
+    N'Уникальность кварталов',
+    N'В одном городе нельзя построить два одинаковых квартала.',
+    N'Строительство'
+),
+(
+    N'Особые свойства персонажей',
+    N'Каждый персонаж обладает особым свойством, которое может применять в свой ход в соответствии с правилами.',
+    N'Персонажи'
+),
+(
+    N'Завершение игры',
+    N'Когда игрок строит седьмой квартал, текущий раунд доигрывается до конца, после чего начинается подсчёт очков.',
+    N'Завершение игры'
+),
+(
+    N'Подсчёт очков',
+    N'Игроки получают очки за стоимость построенных кварталов, разнообразие их видов и завершение строительства города.',
+    N'Завершение игры'
+)) AS seed(Title, Description, Category)
+WHERE NOT EXISTS (SELECT 1 FROM dbo.GameRules AS existing WHERE existing.Title = seed.Title);
+GO
+
 SELECT N'Roles' AS TableName, COUNT(*) AS RowsCount FROM dbo.Roles
 UNION ALL
 SELECT N'Districts', COUNT(*) FROM dbo.Districts;
 
-select * from Roles;

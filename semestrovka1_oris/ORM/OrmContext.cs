@@ -1,5 +1,6 @@
 ﻿using System.Globalization;
 using System.Reflection;
+using System.Data.Common;
 using System.Text;
 using System.Text.RegularExpressions;
 using Microsoft.Data.SqlClient;
@@ -26,8 +27,6 @@ namespace ORM
 
             string sql = $"SELECT * FROM {safeTableName}";
 
-            var result = new List<T>();
-
             await using var connection =
                 new SqlConnection(_connectionString);
 
@@ -38,6 +37,14 @@ namespace ORM
 
             await using var reader =
                 await command.ExecuteReaderAsync(cancellationToken);
+            return await ReadRowsAsync<T>(reader, cancellationToken);
+        }
+
+        internal static async Task<IReadOnlyList<T>> ReadRowsAsync<T>(
+            DbDataReader reader, CancellationToken cancellationToken = default)
+            where T : class, new()
+        {
+            var result = new List<T>();
 
             PropertyInfo[] properties = typeof(T)
                 .GetProperties(BindingFlags.Public |

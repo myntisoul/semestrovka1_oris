@@ -1,0 +1,25 @@
+<h2>Редактирование района</h2>
+<div class="found">
+    <form method="post" action="/admin/updatedistrict" enctype="multipart/form-data">
+        <h4>Название</h4>
+        <input type="text" name="name" value="${district.Name}" placeholder="Название района">
+        <h4>Описание</h4>
+        <input type="text" name="description" value="${district.Description}" placeholder="Описание района">
+        <h4>Стоимость</h4>
+        <input type="number" name="cost" min="1" max="100" step="1" required placeholder="Стоимость" value="${district.Cost}">
+        <h4>Количество карт в стопке</h4>
+        <input type="number" name="quantity" min="1" max="100" step="1" required placeholder="Количество" value="${district.Quantity}>
+        <h4>Цвет</h4>
+        <select name="color">
+            <option value="Желтый">Жёлтый</option>
+            <option value="Синий">Синий</option>
+            <option value="Зеленый">Зелёный</option>
+            <option value="Красный">Красный</option>
+            <option value="Фиолетовый">Фиолетовый</option>
+        </select>
+        <h4>Изображение</h4>
+        <input type="file" name="imageurl" placeholder="Карточка района" accept="image/png,image/jpeg,image/webp">
+        <input type="hidden" name="id" value="${district.Id}">
+        <button type="submit">Сохранить</button>
+    </form>
+</div>

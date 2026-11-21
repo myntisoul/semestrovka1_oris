@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\artem\\source\\repos\\semestrovka1_oris\\semestrovka1_oris\\semestrovka1_oris\\semestrovka1_oris.csproj": {}
+    "F:\\artem\\itis\\semestrovka1_oris\\semestrovka1_oris\\semestrovka1_oris.csproj": {}
   },
   "projects": {
-    "C:\\Users\\artem\\source\\repos\\semestrovka1_oris\\semestrovka1_oris\\semestrovka1_oris\\semestrovka1_oris.csproj": {
+    "F:\\artem\\itis\\semestrovka1_oris\\semestrovka1_oris\\semestrovka1_oris.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\artem\\source\\repos\\semestrovka1_oris\\semestrovka1_oris\\semestrovka1_oris\\semestrovka1_oris.csproj",
+        "projectUniqueName": "F:\\artem\\itis\\semestrovka1_oris\\semestrovka1_oris\\semestrovka1_oris.csproj",
         "projectName": "semestrovka1_oris",
-        "projectPath": "C:\\Users\\artem\\source\\repos\\semestrovka1_oris\\semestrovka1_oris\\semestrovka1_oris\\semestrovka1_oris.csproj",
-        "packagesPath": "C:\\Users\\artem\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\artem\\source\\repos\\semestrovka1_oris\\semestrovka1_oris\\semestrovka1_oris\\obj\\",
+        "projectPath": "F:\\artem\\itis\\semestrovka1_oris\\semestrovka1_oris\\semestrovka1_oris.csproj",
+        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
+        "outputPath": "F:\\artem\\itis\\semestrovka1_oris\\semestrovka1_oris\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\artem\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -45,12 +45,16 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "HttpMultipartParser": {
+              "target": "Package",
+              "version": "[10.0.1, )"
+            },
             "Microsoft.Data.SqlClient": {
               "target": "Package",
               "version": "[7.1.2, )"
@@ -82,7 +86,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

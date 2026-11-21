@@ -1,0 +1,32 @@
+<h2>Админ-панелько</h2>
+<div class="found">
+    <h3>Роли</h3>
+    <a href="/admin/addrole"><div class="search-btn">Добавить роль</div></a>
+    $foreach (Role role in roles)
+    {
+        <div class="edit-div">
+            <a href="/wiki/rolesdetails?id=role.Id">role.Name</a>
+            <span>Очерёдность хода: role.TurnOrder</span>
+            <a href="/admin/editrole?id=role.Id"><div class="search-btn">Редактировать</div></a>
+            <form method="post" action="/admin/deleterole">
+                <input type="hidden" name="id" value="role.Id">
+                <button type="submit">Удалить</button>
+            </form>
+        </div>
+    }
+</div>
+<div class="found">
+    <h3>Районы</h3>
+    <a href="/admin/adddistrict"><div class="search-btn">Добавить район</div></a>
+    $foreach (District district in districts)
+    {
+        <div class="edit-div">
+            <a href="/wiki/districtsdetails?id=district.Id">district.Name</a>
+            <a href="/admin/editdistrict?id=district.Id"><div class="search-btn">Редактировать</div></a>
+            <form method="post" action="/admin/deletedistrict">
+                <input type="hidden" name="id" value="district.Id">
+                <button type="submit">Удалить</button>
+            </form>
+        </div>
+    }
+</div>

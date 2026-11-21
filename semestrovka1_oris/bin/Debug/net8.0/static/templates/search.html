@@ -5,6 +5,7 @@
         $foreach (Role role in roles)
         {
             <a href="/wiki/rolesdetails?id=role.Id"><h4>role.Name</h4></a>
+            <p>Очерёдность хода: role.TurnOrder</p>
         }
     </div>
     <div class="found">

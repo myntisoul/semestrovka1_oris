@@ -203,6 +203,7 @@ body {
 .found{
     display: flex;
     flex-direction: column;
+    width: 500px;
 }
 .found h4{
     margin: 0;
@@ -212,4 +213,13 @@ body {
     flex-direction: column;
     width: 500px;
     gap: 20px;
+}
+.found form input{
+    width: 1000px;
+}
+.search-btn{
+    color: white;
+}
+.edit-div{
+    width: 500px;
 }

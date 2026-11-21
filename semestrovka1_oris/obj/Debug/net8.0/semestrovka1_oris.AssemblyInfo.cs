@@ -14,10 +14,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("semestrovka1_oris")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2c93cbd875b15c81dddc5452e9bfa3050c845234")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1e9ff98aeaa2bd32c1d9433993e0dcb455a6df9f")]
 [assembly: System.Reflection.AssemblyProductAttribute("semestrovka1_oris")]
 [assembly: System.Reflection.AssemblyTitleAttribute("semestrovka1_oris")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
+[assembly: System.Runtime.CompilerServices.InternalsVisibleTo("Semestrovka.Tests")]
 
 // Создано классом WriteCodeFragment MSBuild.
 
